@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи — Назад в будущее</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Кастомный CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== НАВИГАЦИЯ ===== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo">
+                    <div class="logo-icon" style="width: 48px; height: 48px; background: none !important; font-size: 0 !important; color: transparent !important; padding: 0 !important; overflow: hidden; border-radius: 8px;">
+                        <img src="assets/images/logo.png" alt="Логотип" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div class="logo-text">НАЗАД В <span>БУДУЩЕЕ</span></div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="characters.html">Персонажи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="locations.html">Локации</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== КОНТЕНТ ===== -->
+    <section class="container" style="margin-top: 60px; margin-bottom: 150px;">
+        <h1 class="section-title">ГЕРОИ И АКТЁРЫ</h1>
+        <p style="color: #A0AAB5; font-size: 20px; max-width: 800px; margin-bottom: 50px;">
+            Каждый персонаж фильма «Назад в будущее» стал легендой. Нажмите на кнопку, чтобы прослушать музыкальную тему героя.
+        </p>
+        
+        <div class="character-grid">
+            <!-- Марти Макфлай -->
+            <div class="character-card">
+                <img src="assets/images/marty.jpg" alt="Марти Макфлай">
+                <h3>МАРТИ МАКФЛАЙ</h3>
+                <div class="actor-name">Майкл Джей Фокс</div>
+                <p class="character-bio">
+                    17-летний подросток, рок-музыкант, скейтбордист. Случайно отправляется в 1955 год 
+                    и нарушает ход времени.
+                </p>
+                <button class="btn-sound" data-track="marty">🎸 Голос</button>
+            </div>
+            
+            <!-- Док Браун -->
+            <div class="character-card">
+                <img src="assets/images/doc.jpg" alt="Док Эмметт Браун">
+                <h3>ДОК ЭММЕТТ БРАУН</h3>
+                <div class="actor-name">Кристофер Ллойд</div>
+                <p class="character-bio">
+                    Гениальный учёный, изобретатель машины времени DeLorean.
+                </p>
+                <button class="btn-sound" data-track="doc">⚡ Голос</button>
+            </div>
+            
+            <!-- Дженнифер Паркер -->
+            <div class="character-card">
+                <img src="assets/images/jennifer.jpg" alt="Дженнифер Паркер">
+                <h3>ДЖЕННИФЕР ПАРКЕР</h3>
+                <div class="actor-name">Клаудия Уэллс</div>
+                <p class="character-bio">
+                    Девушка Марти. Спокойная, понимающая, поддерживает парня.
+                </p>
+                <button class="btn-sound" data-track="jennifer">🎵 Голос</button>
+            </div>
+            
+            <!-- Бифф Таннен -->
+            <div class="character-card">
+                <img src="assets/images/biff.jpg" alt="Бифф Таннен">
+                <h3>БИФФ ТАННЕН</h3>
+                <div class="actor-name">Томас Ф. Уилсон</div>
+                <p class="character-bio">
+                    Главный антагонист. Задира, хулиган.
+                </p>
+                <button class="btn-sound" data-track="biff">🔥 Голос</button>
+            </div>
+            
+            <!-- Джордж Макфлай -->
+            <div class="character-card">
+                <img src="assets/images/george.jpg" alt="Джордж Макфлай">
+                <h3>ДЖОРДЖ МАКФЛАЙ</h3>
+                <div class="actor-name">Криспин Гловер</div>
+                <p class="character-bio">
+                    Отец Марти. Неуверенный в себе подросток.
+                </p>
+                <button class="btn-sound" data-track="george">🌹 Голос</button>
+            </div>
+            
+            <!-- Лоррейн Бейнс -->
+            <div class="character-card">
+                <img src="assets/images/lorraine.jpg" alt="Лоррейн Бейнс">
+                <h3>ЛОРРЕЙН БЕЙНС</h3>
+                <div class="actor-name">Лиа Томпсон</div>
+                <p class="character-bio">
+                    Мать Марти в будущем.
+                </p>
+                <button class="btn-sound" data-track="lorraine">✨ Голос</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ВЫДВИЖНОЙ ПЛЕЕР ===== -->
+    <div class="collapsible-player" id="collapsiblePlayer">
+        
+        <!-- СВЁРНУТОЕ СОСТОЯНИЕ (ВИДНО ВСЕГДА) -->
+        <div class="player-mini" id="playerMini">
+            <div class="container">
+                <div class="player-mini-wrapper">
+                    <div class="player-mini-info">
+                        <span class="player-mini-icon">💿</span>
+                        <span class="player-mini-title" id="miniTrackTitle">The Power of Love</span>
+                    </div>
+                    <div class="player-mini-controls">
+                        <button class="player-mini-play" id="miniPlayPauseBtn">▶</button>
+                        <button class="player-mini-expand" id="expandPlayerBtn">▲</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- РАЗВЁРНУТОЕ СОСТОЯНИЕ (ПОЛНЫЙ ПЛЕЕР) -->
+        <div class="player-expanded" id="playerExpanded">
+            <div class="container">
+                <div class="player-expanded-wrapper">
+                    
+                    <div class="player-expanded-header">
+                        <div class="player-expanded-info">
+                            <div class="player-expanded-cover">
+                                <div class="vinyl-large">💿</div>
+                            </div>
+                            <div class="player-expanded-text">
+                                <div class="player-expanded-title" id="expandedTrackTitle">The Power of Love</div>
+                                <div class="player-expanded-artist" id="expandedTrackArtist">Huey Lewis & The News</div>
+                            </div>
+                        </div>
+                        <button class="player-expanded-collapse" id="collapsePlayerBtn">▼</button>
+                    </div>
+                    
+                    <div class="player-expanded-main">
+                        <div class="player-expanded-progress">
+                            <div class="progress-container">
+                                <input type="range" id="expandedSeekBar" class="seek-bar" value="0" max="100">
+                            </div>
+                            <div class="time-display">
+                                <span id="expandedCurrentTime">0:00</span>
+                                <span id="expandedDuration">3:45</span>
+                            </div>
+                        </div>
+                        
+                        <div class="player-expanded-controls">
+                            <button class="expanded-play-btn" id="expandedPlayPauseBtn">▶</button>
+                        </div>
+                        
+                        <div class="player-expanded-volume">
+                            <span class="volume-label">🔊</span>
+                            <div class="volume-control">
+                                <input type="range" id="expandedVolume" class="volume-slider" min="0" max="1" step="0.05" value="0.7">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ПОДВАЛ ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-logo">
+                        <div class="logo-small">Ф</div>
+                        <span>НАЗАД В БУДУЩЕЕ</span>
+                    </div>
+                    <p>База знаний о фильме. Образовательный проект.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>© 2025 | Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Аудиоэлемент -->
+    <audio id="globalAudio" preload="auto"></audio>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>
