@@ -69,6 +69,7 @@ window.BTTFPlayer = window.BTTFPlayer || (function() {
         if (index !== -1) {
             loadTrack(index);
             play(); // play() сам развернёт плеер
+            ym(112401955, 'reachGoal', 'click-sound');
         }
     }
 
