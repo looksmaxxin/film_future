@@ -86,6 +86,7 @@ class BackToFuturePlayer {
                 if (!window.location.pathname.includes('locations')) {
                     window.location.href = 'locations.html';
                 }
+                ym(112401955, 'reachGoal', 'click-sound');
             });
         });
     }
@@ -123,6 +124,7 @@ class BackToFuturePlayer {
             this.playPauseBtn.innerHTML = '⏸';
             this.playPauseBtn.classList.add('playing');
         }
+        ym(112401955, 'reachGoal', 'click-sound');
     }
     
     pause() {
